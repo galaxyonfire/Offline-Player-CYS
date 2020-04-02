@@ -24,6 +24,9 @@ STORY.open(STORY_LINK)
 STORY_NAME = STORY.get_current_page().find(id='ctl09').string.strip()
 STORY_VIEWER_LINK = 'http://chooseyourstory.com/story/viewer/default.aspx?StoryId=' + re.findall(re.compile('\?[0-9]+'), STORY.get_current_page().find(type='submit')['onclick'])[0][1:]
 
+assert(STORY_NAME != '')
+assert(STORY_VIEWER_LINK != '')
+
 STORY.close()
 
 ONLY_NUM = re.compile('\d+')
@@ -168,7 +171,8 @@ if __name__ == '__main__':
         if input('[yes/no] ') != 'yes':
             sys.exit()
 
-    start_html = '<html><meta http-equiv="refresh" content="0; Story_Data/' + STORY_NAME + '/' + pageTitle(start_browser) + '.html' + '"><meta name="keywords" content="automatic redirection"></html>'
+    START_NAME = pageTitle(start_browser)
+    start_html = '<html><meta http-equiv="refresh" content="0; Story_Data/' + STORY_NAME + '/' + START_NAME + '.html' + '"><meta name="keywords" content="automatic redirection"></html>'
 
     with open('Play_' + STORY_NAME + '.html', 'w') as f:
         f.write(start_html)
