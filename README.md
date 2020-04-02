@@ -8,7 +8,7 @@ By galaxyonfire on Github.com
 
 This a python script built using Python 3.7.6 and [MechanicalSoup](https://github.com/MechanicalSoup/MechanicalSoup) that searches through a story from CYS and rebuilds the story on your local device. You only need one piece of info to get the script running and that is the link to story you want to play.
 
-As an example, consider the story *Eternal* by Endmaster. The link for that story is [http://chooseyourstory.com/story/eternal](http://chooseyourstory.com/story/eternal).
+As an example, consider the story *Eternal* by EndMaster. The link for that story is [http://chooseyourstory.com/story/eternal](http://chooseyourstory.com/story/eternal).
 
 With this link in hand, if we look at line 8 of the script we'll see a `STORY_LINK` variable. Simply paste the link of the story your desire between the two single quotes and run the script to download the story offline.
 
@@ -43,7 +43,7 @@ Afterwards download the story_download.py file and edit the `STORY_LINK` to your
 
 Open the CLI that has access to python in the directory of story_download.py. Now simply run `python story_download.py` and after a few minutes your story should be downloaded for offline viewing!
 
-In the same directory of the story_download.py file, there should be a "Play_the_story_title.html". Simply open that file with your desire web browser and enjoy!
+In the same directory of the story_download.py file, there should be a "Play_the_story_title.html". Simply open that file with your desired web browser and enjoy!
 
 ### Notes
 
