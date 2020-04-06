@@ -95,7 +95,7 @@ def cleanup(browser, childTitles):
     Removes server-dependence of a page and switches links to local files
     Note that after cleanup you cannot call getChildren() successfully
     """
-    links = browser.links
+    links = browser.links()
     links[1]['href'] = START_NAME + '.html'
     links[2]['href'] = "javascript: if (confirm('Your current page is " + pageTitle(browser) + ".html')) window.close();"
 
